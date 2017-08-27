@@ -15,9 +15,10 @@
     "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
   "dependencies": {
+    "uikit": "^3.0.0-beta.30",
     "vue": "^2.3.3",
     "vue-gh-pages": "^1.4.0",
-    "vue-router": "^2.6.0"
+    "vue-router": "^2.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
