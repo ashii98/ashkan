@@ -10,14 +10,14 @@
           <a><i class="fa fa-twitter" aria-hidden="true"></i></a>
         </div>
     </div>
-    <div style="width: 70%; position: relative; left: 12%">
+    <div style="width: 70%; position: relative; left: 15%;">
       <div class="padding">
         <h3>projects</h3>
         <router-link v-bind:to="'/about'">
-          <span class="view-icons" uk-icon="icon: grid"></span>
+          <i class="material-icons view-icons">list</i>
         </router-link>
         <router-link v-bind:to="'/'">
-          <span class="view-icons" uk-icon="icon: list"></span>
+          <i class="material-icons view-icons">view_module</i>
         </router-link>
       </div>
     </div>
@@ -34,6 +34,9 @@
   }
 </script>
 <style>
+  #app {
+    background: #eee;
+  }
   .parallax {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./assets/background.jpg');
     position: relative;
@@ -73,7 +76,9 @@
     color: rgba(255,255,255,1);
   }
   .padding{
-    padding: 25px;
+    padding-top: 25px;
+    position: relative;
+    z-index: 9;
   }
   h3{
     font-family: 'Ubuntu', sans-serif !important;
