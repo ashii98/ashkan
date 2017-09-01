@@ -1,65 +1,13 @@
 <template>
   <div id="about">
-    <div class="about-margin-top" style="width: 70%; left: 15%; position: relative;" uk-scrollspy="target: > div ; cls:uk-animation-slide-bottom; delay: 200; repeat: false">
-      <div class="uk-card uk-card-default uk-grid-collapse about-margin-bottom about-card" uk-grid>
-        <div style="width: 40%;float: left">
-          <div class="uk-float-left uk-display-inline-block">
-            <div class="uk-card-media-left uk-cover-container about-card-header">
-              <img src="../assets/ac/ac-index.png" alt="" uk-cover>
-              <canvas width="600" height="400"></canvas>
-            </div>
-          </div>
-        </div>
-        <div style="width: 60%;float: left">
-          <div class="uk-float-right  uk-display-inline-block">
-            <div class="uk-card-body">
-              <h3 class="uk-card-title">{{project_name}}</h3>
-              <p>{{project_info}}</p>
-              <hr/>
-              <button class="uk-button uk-button-default">read more</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="uk-card uk-card-default uk-grid-collapse about-margin-bottom about-card" uk-grid>
-        <div style="width: 40%;float: left">
-          <div class="uk-float-left uk-display-inline-block">
-            <div class="uk-card-media-left uk-cover-container about-card-header">
-              <img src="../assets/psu/psu-index.png" alt="" uk-cover>
-              <canvas width="600" height="400"></canvas>
-            </div>
-          </div>
-        </div>
-        <div style="width: 60%;float: left">
-          <div class="uk-float-right  uk-display-inline-block">
-            <div class="uk-card-body">
-              <h3 class="uk-card-title">{{project_name2}}</h3>
-              <p>{{project_info2}}</p>
-              <hr/>
-              <button class="uk-button uk-button-default">read more</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="uk-card uk-card-default uk-grid-collapse about-margin-bottom about-card" uk-grid>
-        <div style="width: 40%;float: left">
-          <div class="uk-float-left uk-display-inline-block">
-            <div class="uk-card-media-left uk-cover-container about-card-header">
-              <img src="../assets/shams/index.png" alt="" uk-cover>
-              <canvas width="600" height="400"></canvas>
-            </div>
-          </div>
-        </div>
-        <div style="width: 60%;float: left">
-          <div class="uk-float-right  uk-display-inline-block">
-            <div class="uk-card-body">
-              <h3 class="uk-card-title">{{project_name3}}</h3>
-              <p>{{project_info3}}</p>
-              <hr/>
-              <button class="uk-button uk-button-default">read more</button>
-            </div>
-          </div>
-        </div>
+    <div style="width: 50%; float: left; position: relative; left: 35%">
+      <div class="uk-card uk-card-body uk-text-center" uk-scrollspy="target: > .anime; cls:uk-animation-slide-bottom; delay: 100 ">
+        <img  src="http://res.cloudinary.com/ashi98/image/upload/v1504257242/ashkan_ppcnsv.jpg" class="profile-image anime" />
+        <h2 class="name anime">ashkan dehbashi</h2>
+        <h5 class="anime"><label>dhs.ashkan@gmail.com |</label><label> Tehran |</label><label> Front-end Developer</label></h5>
+        <a class="anime" href="https://github.com/ashii98" target="_blank"><span class="view-icons git" href="" uk-icon="icon: github; ratio:1.5"></span></a>
+        <a class="anime" href="https://twitter.com/ashii77?lang=en" target="_blank"><span class="view-icons tweet" href="" uk-icon="icon: twitter; ratio:1.5"></span></a>
+        <a class="anime" href="https://www.instagram.com/ashi_77/?hl=en" target="_blank"><span class="view-icons insta" href="" uk-icon="icon: instagram; ratio:1.5"></span></a>
       </div>
     </div>
   </div>
@@ -82,52 +30,51 @@
 </script>
 <!-- styling for the component -->
 <style>
-  #about {
-    background: #eee;
+  .profile-image{
+    width: 200px;
+    border: 5px solid #333;
+    border-radius: 50%;
   }
-  .uk-card-title{
-    width: 100%;
-    font-weight: 400;
-    letter-spacing: 1px;
-    font-style: oblique;
+  .uk-card{
+    border-radius: 6px;
+    margin-top: 5%;
   }
-  p{
+  .name{
+    font-family: 'Ubuntu', sans-serif !important;
+    color: #000;
     font-weight: 100;
     letter-spacing: 1px;
-    line-height: 1.7;
-  }
-  .uk-button{
-    font-weight: bold;
-    letter-spacing: 2px;
-    border: none;
-    height: 45px;
-    border-radius: 3px;
-  }
-  .uk-button:hover{background: rgba(0,0,0,0.1);}
-  .uk-button:active{background: rgba(0,0,0,0.3);}
-  .uk-card-title,
-  p,
-  .uk-button{
-    font-family: 'Ubuntu', sans-serif !important;
+    margin: 10px;
     text-transform: capitalize;
-    display: block;
   }
-  .about-margin-top{
-    padding-top: 150px;
+  h5{
+    font-family: 'Ubuntu', sans-serif !important;
+    color: #000;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 20px;
   }
-  .about-margin-bottom{
-    margin-bottom: 80px;
-  }
-  .about-card{
-    position: relative;
+  h3{
+    font-family: 'Ubuntu', sans-serif !important;
+    color: #333;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin: 20px;
+    text-transform: capitalize;
     display: inline-block;
-    border-radius: 6px;
+    float: left;
   }
-  .about-card-header{
-    position: relative;
-    border-radius: 6px;
-    margin-left: -80px;
-    box-shadow: 0 14px 25px rgba(0,0,0,0.16) !important;
-    margin-top: -50px;
+  .view-icons{
+    padding: 10px;
+    color: #333;
+  }
+  .git:hover{
+    color: #6e5494 !important;
+  }
+  .insta:hover{
+    color: #e1306c !important;
+  }
+  .tweet:hover{
+    color: #1da1f2 !important;
   }
 </style>

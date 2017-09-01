@@ -1,27 +1,23 @@
 <template>
   <div id="app">
-    <div class="parallax">
-        <div class="uk-position-center uk-text-center">
-          <img src="./assets/ashkan.jpg" class="profile-image" />
-          <h2>ashkan dehbashi</h2>
-          <h5><label>dhs.ashkan@gmail.com |</label><label> Tehran |</label><label> Front-end Developer</label></h5>
-          <a><i class="fa fa-github" aria-hidden="true"></i></a>
-          <a><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          <a><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        </div>
-    </div>
-    <div style="width: 70%; position: relative; left: 15%;">
-      <div class="padding">
-        <h3>projects</h3>
-        <router-link v-bind:to="'/about'">
-          <i class="material-icons view-icons">list</i>
-        </router-link>
-        <router-link v-bind:to="'/'">
-          <i class="material-icons view-icons">view_module</i>
-        </router-link>
+      <div class="header uk-box-shadow-large uk-text-center" style="width: 20%; float: left; padding: 30px 0">
+        <h2>Ashkan Dehbashi</h2>
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+          <li>
+            <router-link v-bind:to="'/ashkan'">
+              <span uk-icon="icon: user"></span>
+              about
+            </router-link>
+          </li>
+          <li style="padding-right: 8px;">
+            <router-link v-bind:to="'/work'">
+              <span uk-icon="icon: code"></span>
+              work
+            </router-link>
+          </li>
+        </ul>
       </div>
-    </div>
-    <router-view></router-view>
+      <router-view></router-view>
   </div>
 </template>
 
@@ -34,74 +30,54 @@
   }
 </script>
 <style>
-  #app {
-    background: #eee;
+  html, body, #app{
+    background: #fafafa;
+    height: 100%;
   }
-  .parallax {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./assets/background.jpg');
-    position: relative;
-    height: 450px;
-    background-attachment: scroll;
-    background-position: center;
+  .header{
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('http://res.cloudinary.com/ashi98/image/upload/v1504257450/photo_2017-09-01_13-47-14_p1rnjq.jpg');
+    height: 100%;
     background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
     background-size: cover;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  }
-  .profile-image{
-    width: 150px;
-    border: 5px solid #fff;
-    border-radius: 50%;
   }
   h2{
     font-family: 'Ubuntu', sans-serif !important;
     color: #fff;
-    font-weight: 100;
+    font-weight: bold;
     letter-spacing: 1px;
-    margin: 10px;
+    padding-bottom: 5px;
+    margin-top: 20px;
     text-transform: capitalize;
   }
-  h5{
-    font-family: 'Ubuntu', sans-serif !important;
-    color: rgba(255,255,255,0.8);
+  .uk-nav{padding-top: 8px;}
+  .uk-nav li a{
+    color: #fff;
+    font-family: Ubuntu;
+    font-size: 20px;
     font-weight: 100;
-    letter-spacing: 1px;
-    margin: 20px;
-  }
-  .fa{
-    color: rgba(255,255,255,0.7);
-    padding: 10px;
-    font-size: 32px;
-  }
-  .fa:hover{
-    color: rgba(255,255,255,1);
-  }
-  .padding{
-    padding-top: 25px;
-    position: relative;
-    z-index: 9;
-  }
-  h3{
-    font-family: 'Ubuntu', sans-serif !important;
-    color: #333;
-    font-weight: 100;
-    letter-spacing: 1px;
-    margin: 20px;
     text-transform: capitalize;
-    display: inline-block;
-    float: left;
+    letter-spacing: 1px;
+    border-left: 5px solid transparent;
+    padding: 10px 0;
+    padding-right: 5px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
   }
-  .view-icons{
-    float: right;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 50%;
-    background: transparent;
-    color: #333;
+  .uk-nav li a:hover{
+    background: rgba(255,255,255,0.2);
+    color: #fff;
   }
-  .view-icons:hover{
-    background: rgba(0,0,0,0.2);
+  .uk-nav li a:focus{
+    color: #FF4BA8;
+    border-left: 5px solid #FF4BA8;
   }
-  .view-icons:active{
-    background: rgba(0,0,0,0.4);
+  .uk-list li a i{
+    vertical-align: middle;
+    margin-top: -8px;
   }
 </style>
