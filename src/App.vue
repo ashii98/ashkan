@@ -17,8 +17,36 @@
           </li>
         </ul>
       </div>
-      <router-view></router-view>
-  </div>
+      <nav class="uk-navbar uk-navbar-container navbar">
+        <div class="uk-navbar-left">
+          <a class="uk-navbar-toggle navbar-link"  uk-toggle="target: #offcanvas-nav-primary">
+            <span uk-navbar-toggle-icon="ratio:1.2"></span>
+          </a>
+          <router-link v-bind:to="'/'" class="uk-navbar-item uk-logo">Ashkan Dehbashi</router-link>
+        </div>
+      </nav>
+      <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+      <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+        <ul class="uk-nav uk-nav-primary uk-nav-center">
+          <h2>Ashkan Dehbashi</h2>
+          <li class="uk-active">
+            <router-link v-bind:to="'/ashkan'">
+              <span uk-icon="icon: user"></span>
+              about
+            </router-link>
+          </li>
+          <li class="uk-active">
+            <router-link v-bind:to="'/work'">
+              <span uk-icon="icon: code"></span>
+              work
+            </router-link>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    <router-view></router-view>
+      </div>
 </template>
 
 <script>
@@ -79,5 +107,24 @@
   .uk-list li a i{
     vertical-align: middle;
     margin-top: -8px;
+  }
+  .navbar{
+    background-color: #fff !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  }
+  .uk-logo{
+    font-weight: bold !important;
+  }
+  .uk-offcanvas-bar {
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('http://res.cloudinary.com/ashi98/image/upload/v1504257450/photo_2017-09-01_13-47-14_p1rnjq.jpg') !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  @media screen and (max-width: 1024px) {
+    .header{display: none}
+  }
+  @media screen and (min-width: 1025px) {
+    .navbar{display: none}
   }
 </style>

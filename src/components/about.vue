@@ -1,6 +1,6 @@
 <template>
   <div id="about">
-    <div style="width: 50%; float: left; position: relative; left: 35%">
+    <div class="max-width" style="width: 50%; float: left; position: relative; left: 35%">
       <div class="uk-card uk-card-body uk-text-center" uk-scrollspy="target: > .anime; cls:uk-animation-slide-bottom; delay: 100 ">
         <img  src="http://res.cloudinary.com/ashi98/image/upload/v1504257242/ashkan_ppcnsv.jpg" class="profile-image anime" />
         <h2 class="name anime">ashkan dehbashi</h2>
@@ -76,5 +76,11 @@
   }
   .tweet:hover{
     color: #1da1f2 !important;
+  }
+  @media screen and (max-width: 699px) {
+    .max-width{
+      width: 100% !important;
+      left: 0 !important;
+    }
   }
 </style>

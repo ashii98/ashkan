@@ -1,6 +1,6 @@
 <template>
   <div id="ac">
-    <div style="width: 60%; float: left; position: relative; left: 30%" uk-scrollspy="target: > div ; cls:uk-animation-slide-bottom; delay: 100; repeat: false">
+    <div class="max-width" style="width: 60%; float: left; position: relative; left: 30%" uk-scrollspy="target: > div ; cls:uk-animation-slide-bottom; delay: 100; repeat: false">
       <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
         <h5>
           <span uk-icon="icon: tag"></span>
@@ -136,4 +136,10 @@
   .purple-bg:hover{  background: #7B1FA2; }
   .red-bg{  background: #F44336; }
   .red-bg:hover{  background: #D32F2F; }
+  @media screen and (max-width: 699px) {
+    .max-width{
+      width: 100% !important;
+      left: 0 !important;
+    }
+  }
 </style>
