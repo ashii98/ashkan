@@ -1,6 +1,6 @@
 <template>
   <div id="psu">
-    <div class="max-width" style="width: 60%; float: left; position: relative; left: 30%" uk-scrollspy="target: > div ; cls:uk-animation-fade; delay: 0; repeat: false">
+    <div class="max-width" style="width: 60%; float: left; position: relative; left: 30%" uk-scrollspy="target: > div ; cls:uk-animation-scale-up; delay: 0; repeat: false">
       <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
         <h5>
           <span uk-icon="icon: tag"></span>

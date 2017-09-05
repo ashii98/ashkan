@@ -9,7 +9,7 @@
               about
             </router-link>
           </li>
-          <li style="padding-right: 8px;">
+          <li>
             <router-link v-bind:to="'/work'">
               <span uk-icon="icon: code"></span>
               work

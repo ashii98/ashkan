@@ -1,6 +1,6 @@
 <template>
   <div id="hello">
-    <div class="max-width max-max-width" style="width: 70%; left: 25%; position: relative; padding-top: 50px;" uk-scrollspy="target: > div ; cls:uk-animation-slide-bottom; delay: 100; repeat: false">
+    <div class="max-width max-max-width" style="width: 70%; left: 25%; position: relative; padding-top: 50px;" uk-scrollspy="target: > div ; cls:uk-animation-scale-up; delay: 100; repeat: false">
       <!--archriver-->
       <div class="uk-card uk-card-default uk-grid-collapse about-margin-bottom about-card max-width" style="width: 90%; left:10%;" uk-grid>
         <div class="max-width" style="width: 40%;float: left">
