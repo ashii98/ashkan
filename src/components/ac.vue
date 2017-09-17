@@ -20,7 +20,7 @@
         </h5>
         <h4>{{project_info}}</h4>
         <div class="uk-text-center">
-          <a  class="view-button uk-button purple-bg">coming soon</a>
+          <a href="http://178.252.166.163:33404/" target="_blank" class="view-button uk-button green-bg">View Site</a>
         </div>
       </div>
       <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
